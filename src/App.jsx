@@ -2,6 +2,7 @@
 import './index.css';
 import AboutPage from './AboutPage'; // มั่นใจว่ามีไฟล์ AboutPage.jsx อยู่ในโฟลเดอร์ src
 import ProjectsPage from './ProjectsPage';
+import ServicesPage from './ServicesPage';
 
 const App = () => {
   // สร้าง State สำหรับควบคุมการสลับหน้า
@@ -48,7 +49,7 @@ const App = () => {
   };
 
   // --- ส่วนประกอบของหน้าแรก (Landing Page Content) ---
-  const LandingPageContent = () => (
+  const LandingPageContent = ({ navigateTo }) => (
     <>
       {/* HERO SECTION */}
       <header 
@@ -83,10 +84,10 @@ const App = () => {
           <h2 className="text-3xl font-bold mb-3 text-slate-900">บริการหลักของเรา</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <ServiceCard icon="/assets/icons/cctv.svg" title="CCTV" color="text-blue-800" desc="ระบบกล้อง IP Camera พร้อม AI วิเคราะห์ใบหน้าและป้ายทะเบียน" />
-            <ServiceCard icon="/assets/icons/acs.svg" title="Access Control" color="text-teal-700" desc="ควบคุมการเข้า-ออกด้วยใบหน้า ลายนิ้วมือ และระบบลงเวลา" />
-            <ServiceCard icon="/assets/icons/turnstile.svg" title="Turnstile" color="text-slate-700" desc="เครื่องกั้นทางเดินอัตโนมัติสำหรับอาคารสำนักงาน" />
-            <ServiceCard icon="/assets/icons/barrier.svg" title="Gate Barrier" color="text-orange-900" desc="ระบบไม้กั้นรถ เชื่อม RFID และอ่านป้ายทะเบียน" />
+            <ServiceCard onClick={() => navigateTo('services')} icon="/assets/icons/cctv.svg" title="CCTV" color="text-blue-800" desc="ระบบกล้อง IP Camera พร้อม AI วิเคราะห์ใบหน้าและป้ายทะเบียน" />
+            <ServiceCard onClick={() => navigateTo('services')} icon="/assets/icons/acs.svg" title="Access Control" color="text-teal-700" desc="ควบคุมการเข้า-ออกด้วยใบหน้า ลายนิ้วมือ และระบบลงเวลา" />
+            <ServiceCard onClick={() => navigateTo('services')} icon="/assets/icons/turnstile.svg" title="Turnstile" color="text-slate-700" desc="เครื่องกั้นทางเดินอัตโนมัติสำหรับอาคารสำนักงาน" />
+            <ServiceCard onClick={() => navigateTo('services')} icon="/assets/icons/barrier.svg" title="Gate Barrier" color="text-orange-900" desc="ระบบไม้กั้นรถ เชื่อม RFID และอ่านป้ายทะเบียน" />
           </div>
         </div>
       </section>
@@ -114,8 +115,10 @@ const App = () => {
   );
 
   // Component ย่อยสำหรับ Card บริการ
-  const ServiceCard = ({ icon, title, desc, color }) => (
-    <div className="p-6 border border-gray-100 rounded-xl hover:shadow-xl transition bg-white">
+  const ServiceCard = ({ icon, title, desc, color, onClick }) => (
+    <div 
+      onClick={onClick}
+      className="p-6 border border-gray-100 rounded-xl hover:shadow-xl transition bg-white">
       <div className="mb-4 flex justify-center">
         <img src={icon} alt={title} className="h-12 w-12" />
       </div>
@@ -195,9 +198,10 @@ const App = () => {
 
       {/* MAIN CONTENT Area */}
       <main>
-        {currentPage === 'home' && <LandingPageContent />}
+        {currentPage === 'home' && <LandingPageContent navigateTo={navigateTo} />}
         {currentPage === 'about' && <AboutPage />}
         {currentPage === 'projects' && <ProjectsPage />}
+        {currentPage === 'services' && <ServicesPage />}
       </main>
 
       {/* CONTACT SECTION (แสดงทุกหน้า) */}
