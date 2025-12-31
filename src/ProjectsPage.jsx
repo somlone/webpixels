@@ -9,35 +9,47 @@ const ProjectsPage = () => {
   const projectList = [
     {
       id: 1,
-      title: "อาคารสำนักงานใหญ่ XYZ",
+      title: "โรงพยาบาลเด็กสมิติเวช อินเตอร์เนชั่นแนล",
       location: "กรุงเทพมหานคร",
-      systems: ["CCTV (AI)", "Access Control (Face Scan)", "Gate Barrier"],
-      description: "โครงการติดตั้งระบบรักษาความปลอดภัยครบวงจรสำหรับอาคารสำนักงานขนาดใหญ่ โดยเน้นการผสานเทคโนโลยี AI เพื่อการวิเคราะห์ภาพและควบคุมการเข้าออกอย่างมีประสิทธิภาพ",
+      systems: ["CCTV (AI)", "Access Control (Face Scan)", "Video Intercom"],
+      description: "โครงการติดตั้งระบบรักษาความปลอดภัยครบวงจรสำหรับอาคารโรงพยาบาล โดยเน้นการผสานเทคโนโลยี AI เพื่อการค้นหาด้วยภาพถ่ายและควบคุมการเข้าออกอย่างมีประสิทธิภาพ",
       images: [
         "/assets/projects/project-1-main.jpg",
         "/assets/projects/project-1-install-1.jpg",
         "/assets/projects/project-1-install-2.jpg",
         "/assets/projects/project-1-install-3.jpg",
+        "/assets/projects/project-1-install-4.jpg",
+        "/assets/projects/project-1-install-5.jpg",
+        "/assets/projects/project-1-install-6.jpg",
+        "/assets/projects/project-1-install-7.jpg",
+        "/assets/projects/project-1-install-8.jpg",
+        "/assets/projects/project-1-install-9.jpg",
+        "/assets/projects/project-1-install-10.jpg",
       ]
     },
     {
       id: 2,
-      title: "โครงการหมู่บ้านจัดสรร Modern Home",
-      location: "นนทบุรี",
-      systems: ["Gate Barrier (RFID)", "CCTV (LPR)", "Smart Home Integration"],
-      description: "พัฒนาระบบไม้กั้นรถยนต์อัจฉริยะที่เชื่อมต่อกับระบบ RFID และกล้องอ่านป้ายทะเบียน (LPR) เพื่อการจัดการการเข้าออกของลูกบ้านและผู้มาติดต่ออย่างรวดเร็วและปลอดภัย",
+      title: "โรงพยาบาลกรุงเทพหัวหิน",
+      location: "หัวหิน ประจวบคีรีขันธ์",
+      systems: ["Access Control System", "SMART CCTV"],
+      description: "โครงการติดตั้งระบบรักษาความปลอดภัยครบวงจรสำหรับอาคารโรงพยาบาล ทั้งระบบควบคุมการเข้าออก และระบบกล้องวงจรปิด",
       images: [
         "/assets/projects/project-2-main.jpg",
         "/assets/projects/project-2-install-1.jpg",
         "/assets/projects/project-2-install-2.jpg",
+        "/assets/projects/project-2-install-3.jpg",
+        "/assets/projects/project-2-install-4.jpg",
+        "/assets/projects/project-2-install-5.jpg",
+        "/assets/projects/project-2-install-6.jpg",
+        "/assets/projects/project-2-install-7.jpg",
       ]
     },
     {
       id: 3,
-      title: "โรงงานอุตสาหกรรม FoodTech",
-      location: "สมุทรปราการ",
-      systems: ["Access Control (Fingerprint)", "Time Attendance", "CCTV"],
-      description: "ติดตั้งระบบควบคุมการเข้าออกด้วยลายนิ้วมือและระบบบันทึกเวลาทำงาน เพื่อเพิ่มความปลอดภัยและประสิทธิภาพในการบริหารจัดการบุคลากรภายในโรงงาน",
+      title: "อาคารที่พักอาศัยสำนักงานปลัดกระทรวงกลาโหม พื้นที่แขวงบางจาก",
+      location: "กรุงเทพมหานคร",
+      systems: ["Access Control (Card Reader)", "CCTV"],
+      description: "ติดตั้งระบบควบคุมการเข้าออกด้วยบัตร RFID เพื่อเพิ่มความปลอดภัยและประสิทธิภาพในการบริหารจัดการบุคลากรภายในอาคารที่พักอาศัย",
       images: [
         "/assets/projects/project-3-main.jpg",
         "/assets/projects/project-3-install-1.jpg",
@@ -46,38 +58,38 @@ const ProjectsPage = () => {
     },
     {
       id: 4,
-      title: "คอนโดมิเนียมใจกลางเมือง The Loft",
-      location: "กรุงเทพมหานคร",
-      systems: ["Smart CCTV", "Turnstile", "Visitor Management System"],
-      description: "ยกระดับความปลอดภัยในคอนโดมิเนียมด้วยกล้องวงจรปิดอัจฉริยะ ระบบ Turnstile และระบบจัดการผู้มาติดต่อที่ทันสมัย",
+      title: "ALLEGRO MICROSYSTEMS (THAILAND) CO.,LTD, Factory",
+      location: "สระบุรี",
+      systems: ["Smart CCTV"],
+      description: "ยกระดับความปลอดภัยในโรงงานด้วยกล้องวงจรปิดอัจฉริยะและทันสมัย",
       images: [
         "/assets/projects/project-4-main.jpg",
         "/assets/projects/project-4-install-1.jpg",
         "/assets/projects/project-4-install-2.jpg",
+        "/assets/projects/project-4-install-3.jpg",
+        "/assets/projects/project-4-install-4.jpg",
+        "/assets/projects/project-4-install-5.jpg",
+        "/assets/projects/project-4-install-6.jpg",
       ]
     },
     {
       id: 5,
-      title: "คลังสินค้าขนาดใหญ่ Logistics Hub",
-      location: "อยุธยา",
-      systems: ["CCTV (Perimeter Alert)", "Access Control", "Gate Barrier"],
-      description: "ระบบกล้องวงจรปิดพร้อมแจ้งเตือนการบุกรุกพื้นที่ ระบบควบคุมการเข้าออกและไม้กั้นสำหรับรถขนส่ง เพื่อความปลอดภัยสูงสุดของสินค้า",
+      title: "มหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี, คลองหก",
+      location: "ปทุมธานี",
+      systems: ["CCTV"],
+      description: "ระบบกล้องวงจรปิดเพื่อความปลอดภัยสูงสุดของนักศึกษา",
       images: [
         "/assets/projects/project-5-main.jpg",
-        "/assets/projects/project-5-install-1.jpg",
-        "/assets/projects/project-5-install-2.jpg",
       ]
     },
     {
       id: 6,
-      title: "สถานศึกษา Future Kids School",
-      location: "ปทุมธานี",
-      systems: ["Access Control (Face Scan)", "CCTV", "Emergency Button"],
-      description: "เสริมสร้างความปลอดภัยให้กับนักเรียนและบุคลากร ด้วยระบบสแกนใบหน้าเข้า-ออก กล้องวงจรปิด และปุ่มแจ้งเหตุฉุกเฉิน",
+      title: "โรงพยาบาลภัทรินทร์",
+      location: "สมุทรปราการ",
+      systems: ["Access Control (Face Scan)", "Gate Barrier", "CCTV"],
+      description: "เสริมสร้างความปลอดภัยให้กับบุคลากร ด้วยระบบสแกนใบหน้าเข้า-ออก และ กล้องวงจรปิด",
       images: [
         "/assets/projects/project-6-main.jpg",
-        "/assets/projects/project-6-install-1.jpg",
-        "/assets/projects/project-6-install-2.jpg",
       ]
     }
   ];
@@ -95,7 +107,7 @@ const ProjectsPage = () => {
   }}
 >
   <div className="container mx-auto px-6 relative z-10 text-left">
-    <h1 className="text-5xl font-bold mb-4">Our Projects</h1>
+    <h1 className="text-5xl font-bold mb-4">ผลงานของเรา</h1>
     <p className="text-xl text-gray-200 max-w-xl">
       สัมผัสประสบการณ์ความปลอดภัยระดับมาตรฐานสากล 
       ผ่านผลงานการติดตั้งที่ได้รับความไว้วางใจจากองค์กรชั้นนำ
